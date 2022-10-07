@@ -6,8 +6,10 @@ namespace Module3HM1
 {
     public class ArrEnumerator : IEnumerator<int>
     {
-        int[] numbers;
+        public int[] numbers;
+
         int position = -1;
+
         public ArrEnumerator(int[] numbers)
         {
             this.numbers = numbers;
@@ -28,6 +30,7 @@ namespace Module3HM1
                 return numbers[position];
             }
         }
+
         object IEnumerator.Current => throw new NotImplementedException();
 
         public bool MoveNext()
@@ -45,6 +48,7 @@ namespace Module3HM1
         {
             position = -1;
         }
+
         public void Dispose() { }
     }
 }
